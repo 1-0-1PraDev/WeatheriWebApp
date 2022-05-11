@@ -25,7 +25,7 @@ window.addEventListener("load", function(){
             long = position.coords.longitude;
             lat = position.coords.latitude;
 
-            const baseUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lat},${long}`;
+            const baseUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lat},${long}`;
             fetch(baseUrl).then(function(response){
                 return response.json();
             })
@@ -74,7 +74,7 @@ searchBtn.addEventListener("click", function(e){
     let cityNam = inputField.value;
     inputField.value = "";
     // console.log(inputField.childNodes[1].value);
-    const baseUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityNam}`;
+    const baseUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityNam}`;
     fetch(baseUrl).then(function(response){
         return response.json();
     }).then(function(data){
