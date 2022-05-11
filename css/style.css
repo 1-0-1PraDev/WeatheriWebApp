@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: rgba(20, 26, 27, 0.819);
+     */
+    
+    }
+
+    body::before{
+        content: "";
+        position: absolute;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        filter: blur(3px);
+        background: url(../imgs/sunnybcg.webp);
+        /* background:red; */
+        z-index: -1;
+    }
+
+.weatherApp{
+    width: 70vw;
+    min-height: 70vh;
+    background: url(../imgs/windy.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    overflow: hidden;
+    display: grid;
+    box-shadow: rgba(17, 12, 46, 0.7) 0px 48px 100px 0px;
+    grid-template-columns: 1fr 30%;
+}
+
+.weatherApp .leftBx{
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.weatherApp .leftBx .appName{
+    padding: 2rem;
+}
+
+.weatherApp .leftBx .appName h3{
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.weatherApp .leftBx .weather-details{
+    display: flex;
+    align-items: center;
+    padding: 2rem 1.6rem;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+
+.weatherApp .leftBx .weather-details .details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+
+.weatherApp .leftBx .weather-details .details .city-name{
+    font-size: 2rem;
+}
+
+.weatherApp .leftBx .weather-details h1{
+    font-size: 5rem;
+}
+
+.weatherApp .leftBx .weather-details h1 sup{
+    margin-top: 2rem;
+    margin-left: -1.4rem;
+    /* display: inline-block; */
+    font-size: 2.3rem;
+}
+
+.weatherApp .rightBx{
+    /* background: pink; */
+    position: relative;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+}
+
+.weatherApp .rightBx .searchBx{
+    display: flex;
+    gap: 0.3rem;
+}
+
+.weatherApp .rightBx .weather-more-details{
+    padding: 1rem;
+    display: flex;
+    margin-top: 2.3rem;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.weatherApp .rightBx .weather-more-details div{ 
+    display: flex;
+    justify-content: space-between;
+}
+
+.weatherApp .rightBx .weather-more-details .key-name{
+    opacity: 0.7;
+}
+
+.weatherApp .rightBx .weather-more-details .value{
+    font-weight: bold;
+}
+
+
+#iconImg{
+    width: 140px;
+    height: 140px; 
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.weatherApp .rightBx .searchBx .inputBx{
+    width: 79%;
+    margin-left: 0.5rem;
+}
+
+.weatherApp .rightBx .searchBx .searchBtn{
+    /* background-color: #00DBDE;
+background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%); */
+background-color: #00DBDE;
+background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.weatherApp .rightBx .searchBx .searchBtn img{
+    width: 20px;
+    height: 20px;
+    filter: invert(100%);
+}
+
+.weatherApp .rightBx .searchBx .inputBx input{
+    width: 100%;
+    padding: 0.5rem 0.3rem;
+    border: none;
+    outline: none;
+    border-bottom: 0.06rem solid #fff;
+    background: transparent;
+    color: #fff;
+}
+
+.weatherApp .rightBx .searchBx .inputBx input::placeholder{
+    color: #fff;
+    opacity: 0.7;
+    padding-left: 0.4rem;
+}
+
+@media (max-width: 768px){
+    .weatherApp{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 400px){
+    html{
+        font-size: 14px;
+    }
+}
